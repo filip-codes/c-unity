@@ -1,0 +1,3 @@
+/Users/filippetrovic/Code/c-unity/cmake-build-debug/CMakeFiles/c_unity.dir
+/Users/filippetrovic/Code/c-unity/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/filippetrovic/Code/c-unity/cmake-build-debug/CMakeFiles/rebuild_cache.dir
