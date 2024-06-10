@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: c_unity
+# Project: Sample Project
 # Configurations: Debug
 # =============================================================================
 
@@ -40,36 +40,185 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /Users/filippetrovic/Code/c-unity/cmake-build-debug/
-# =============================================================================
-# Object build statements for EXECUTABLE target c_unity
+
+#############################################
+# Utility command for Experimental
+
+build Experimental: phony CMakeFiles/Experimental
 
 
 #############################################
-# Order-only phony target for c_unity
+# Utility command for Nightly
 
-build cmake_object_order_depends_target_c_unity: phony || CMakeFiles/c_unity.dir
-
-build CMakeFiles/c_unity.dir/src/main.c.o: C_COMPILER__c_unity_unscanned_Debug /Users/filippetrovic/Code/c-unity/src/main.c || cmake_object_order_depends_target_c_unity
-  DEP_FILE = CMakeFiles/c_unity.dir/src/main.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/c_unity.dir
-  OBJECT_FILE_DIR = CMakeFiles/c_unity.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target c_unity
+build Nightly: phony CMakeFiles/Nightly
 
 
 #############################################
-# Link the executable c_unity
+# Utility command for Continuous
 
-build c_unity: C_EXECUTABLE_LINKER__c_unity_Debug CMakeFiles/c_unity.dir/src/main.c.o
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
-  OBJECT_DIR = CMakeFiles/c_unity.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = c_unity
-  TARGET_PDB = c_unity.dbg
+build Continuous: phony CMakeFiles/Continuous
+
+
+#############################################
+# Utility command for NightlyMemoryCheck
+
+build NightlyMemoryCheck: phony CMakeFiles/NightlyMemoryCheck
+
+
+#############################################
+# Utility command for NightlyStart
+
+build NightlyStart: phony CMakeFiles/NightlyStart
+
+
+#############################################
+# Utility command for NightlyUpdate
+
+build NightlyUpdate: phony CMakeFiles/NightlyUpdate
+
+
+#############################################
+# Utility command for NightlyConfigure
+
+build NightlyConfigure: phony CMakeFiles/NightlyConfigure
+
+
+#############################################
+# Utility command for NightlyBuild
+
+build NightlyBuild: phony CMakeFiles/NightlyBuild
+
+
+#############################################
+# Utility command for NightlyTest
+
+build NightlyTest: phony CMakeFiles/NightlyTest
+
+
+#############################################
+# Utility command for NightlyCoverage
+
+build NightlyCoverage: phony CMakeFiles/NightlyCoverage
+
+
+#############################################
+# Utility command for NightlyMemCheck
+
+build NightlyMemCheck: phony CMakeFiles/NightlyMemCheck
+
+
+#############################################
+# Utility command for NightlySubmit
+
+build NightlySubmit: phony CMakeFiles/NightlySubmit
+
+
+#############################################
+# Utility command for ExperimentalStart
+
+build ExperimentalStart: phony CMakeFiles/ExperimentalStart
+
+
+#############################################
+# Utility command for ExperimentalUpdate
+
+build ExperimentalUpdate: phony CMakeFiles/ExperimentalUpdate
+
+
+#############################################
+# Utility command for ExperimentalConfigure
+
+build ExperimentalConfigure: phony CMakeFiles/ExperimentalConfigure
+
+
+#############################################
+# Utility command for ExperimentalBuild
+
+build ExperimentalBuild: phony CMakeFiles/ExperimentalBuild
+
+
+#############################################
+# Utility command for ExperimentalTest
+
+build ExperimentalTest: phony CMakeFiles/ExperimentalTest
+
+
+#############################################
+# Utility command for ExperimentalCoverage
+
+build ExperimentalCoverage: phony CMakeFiles/ExperimentalCoverage
+
+
+#############################################
+# Utility command for ExperimentalMemCheck
+
+build ExperimentalMemCheck: phony CMakeFiles/ExperimentalMemCheck
+
+
+#############################################
+# Utility command for ExperimentalSubmit
+
+build ExperimentalSubmit: phony CMakeFiles/ExperimentalSubmit
+
+
+#############################################
+# Utility command for ContinuousStart
+
+build ContinuousStart: phony CMakeFiles/ContinuousStart
+
+
+#############################################
+# Utility command for ContinuousUpdate
+
+build ContinuousUpdate: phony CMakeFiles/ContinuousUpdate
+
+
+#############################################
+# Utility command for ContinuousConfigure
+
+build ContinuousConfigure: phony CMakeFiles/ContinuousConfigure
+
+
+#############################################
+# Utility command for ContinuousBuild
+
+build ContinuousBuild: phony CMakeFiles/ContinuousBuild
+
+
+#############################################
+# Utility command for ContinuousTest
+
+build ContinuousTest: phony CMakeFiles/ContinuousTest
+
+
+#############################################
+# Utility command for ContinuousCoverage
+
+build ContinuousCoverage: phony CMakeFiles/ContinuousCoverage
+
+
+#############################################
+# Utility command for ContinuousMemCheck
+
+build ContinuousMemCheck: phony CMakeFiles/ContinuousMemCheck
+
+
+#############################################
+# Utility command for ContinuousSubmit
+
+build ContinuousSubmit: phony CMakeFiles/ContinuousSubmit
+
+
+#############################################
+# Utility command for test
+
+build CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test: phony CMakeFiles/test.util
 
 
 #############################################
@@ -94,8 +243,461 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Custom command for CMakeFiles/Experimental
+
+build CMakeFiles/Experimental | ${cmake_ninja_workdir}CMakeFiles/Experimental: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D Experimental
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/Nightly
+
+build CMakeFiles/Nightly | ${cmake_ninja_workdir}CMakeFiles/Nightly: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D Nightly
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/Continuous
+
+build CMakeFiles/Continuous | ${cmake_ninja_workdir}CMakeFiles/Continuous: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D Continuous
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyMemoryCheck
+
+build CMakeFiles/NightlyMemoryCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemoryCheck: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyMemoryCheck
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyStart
+
+build CMakeFiles/NightlyStart | ${cmake_ninja_workdir}CMakeFiles/NightlyStart: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyStart
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyUpdate
+
+build CMakeFiles/NightlyUpdate | ${cmake_ninja_workdir}CMakeFiles/NightlyUpdate: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyUpdate
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyConfigure
+
+build CMakeFiles/NightlyConfigure | ${cmake_ninja_workdir}CMakeFiles/NightlyConfigure: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyConfigure
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyBuild
+
+build CMakeFiles/NightlyBuild | ${cmake_ninja_workdir}CMakeFiles/NightlyBuild: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyBuild
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyTest
+
+build CMakeFiles/NightlyTest | ${cmake_ninja_workdir}CMakeFiles/NightlyTest: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyTest
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyCoverage
+
+build CMakeFiles/NightlyCoverage | ${cmake_ninja_workdir}CMakeFiles/NightlyCoverage: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyCoverage
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyMemCheck
+
+build CMakeFiles/NightlyMemCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlySubmit
+
+build CMakeFiles/NightlySubmit | ${cmake_ninja_workdir}CMakeFiles/NightlySubmit: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlySubmit
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalStart
+
+build CMakeFiles/ExperimentalStart | ${cmake_ninja_workdir}CMakeFiles/ExperimentalStart: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalStart
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalUpdate
+
+build CMakeFiles/ExperimentalUpdate | ${cmake_ninja_workdir}CMakeFiles/ExperimentalUpdate: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalUpdate
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalConfigure
+
+build CMakeFiles/ExperimentalConfigure | ${cmake_ninja_workdir}CMakeFiles/ExperimentalConfigure: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalConfigure
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalBuild
+
+build CMakeFiles/ExperimentalBuild | ${cmake_ninja_workdir}CMakeFiles/ExperimentalBuild: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalBuild
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalTest
+
+build CMakeFiles/ExperimentalTest | ${cmake_ninja_workdir}CMakeFiles/ExperimentalTest: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalTest
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalCoverage
+
+build CMakeFiles/ExperimentalCoverage | ${cmake_ninja_workdir}CMakeFiles/ExperimentalCoverage: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalCoverage
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalMemCheck
+
+build CMakeFiles/ExperimentalMemCheck | ${cmake_ninja_workdir}CMakeFiles/ExperimentalMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalSubmit
+
+build CMakeFiles/ExperimentalSubmit | ${cmake_ninja_workdir}CMakeFiles/ExperimentalSubmit: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalSubmit
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousStart
+
+build CMakeFiles/ContinuousStart | ${cmake_ninja_workdir}CMakeFiles/ContinuousStart: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousStart
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousUpdate
+
+build CMakeFiles/ContinuousUpdate | ${cmake_ninja_workdir}CMakeFiles/ContinuousUpdate: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousUpdate
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousConfigure
+
+build CMakeFiles/ContinuousConfigure | ${cmake_ninja_workdir}CMakeFiles/ContinuousConfigure: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousConfigure
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousBuild
+
+build CMakeFiles/ContinuousBuild | ${cmake_ninja_workdir}CMakeFiles/ContinuousBuild: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousBuild
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousTest
+
+build CMakeFiles/ContinuousTest | ${cmake_ninja_workdir}CMakeFiles/ContinuousTest: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousTest
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousCoverage
+
+build CMakeFiles/ContinuousCoverage | ${cmake_ninja_workdir}CMakeFiles/ContinuousCoverage: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousCoverage
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousMemCheck
+
+build CMakeFiles/ContinuousMemCheck | ${cmake_ninja_workdir}CMakeFiles/ContinuousMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousSubmit
+
+build CMakeFiles/ContinuousSubmit | ${cmake_ninja_workdir}CMakeFiles/ContinuousSubmit: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousSubmit
+  pool = console
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/filippetrovic/Code/c-unity/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target sum_module
+
+
+#############################################
+# Order-only phony target for sum_module
+
+build cmake_object_order_depends_target_sum_module: phony || sum_module/CMakeFiles/sum_module.dir
+
+build sum_module/CMakeFiles/sum_module.dir/sum_module.c.o: C_COMPILER__sum_module_unscanned_Debug /Users/filippetrovic/Code/c-unity/sum_module/sum_module.c || cmake_object_order_depends_target_sum_module
+  DEP_FILE = sum_module/CMakeFiles/sum_module.dir/sum_module.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/filippetrovic/Code/c-unity/sum_module
+  OBJECT_DIR = sum_module/CMakeFiles/sum_module.dir
+  OBJECT_FILE_DIR = sum_module/CMakeFiles/sum_module.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target sum_module
+
+
+#############################################
+# Link the static library sum_module/libsum_module.a
+
+build sum_module/libsum_module.a: C_STATIC_LIBRARY_LINKER__sum_module_Debug sum_module/CMakeFiles/sum_module.dir/sum_module.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = sum_module/CMakeFiles/sum_module.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = sum_module/libsum_module.a
+  TARGET_PDB = sum_module.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build sum_module/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug/sum_module && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build sum_module/test: phony sum_module/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build sum_module/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug/sum_module && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build sum_module/edit_cache: phony sum_module/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build sum_module/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug/sum_module && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/filippetrovic/Code/c-unity -B/Users/filippetrovic/Code/c-unity/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build sum_module/rebuild_cache: phony sum_module/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/filippetrovic/Code/c-unity/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target Unity
+
+
+#############################################
+# Order-only phony target for Unity
+
+build cmake_object_order_depends_target_Unity: phony || external/CMakeFiles/Unity.dir
+
+build external/CMakeFiles/Unity.dir/unity/src/unity.c.o: C_COMPILER__Unity_unscanned_Debug /Users/filippetrovic/Code/c-unity/external/unity/src/unity.c || cmake_object_order_depends_target_Unity
+  DEP_FILE = external/CMakeFiles/Unity.dir/unity/src/unity.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/filippetrovic/Code/c-unity/external/unity/src
+  OBJECT_DIR = external/CMakeFiles/Unity.dir
+  OBJECT_FILE_DIR = external/CMakeFiles/Unity.dir/unity/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target Unity
+
+
+#############################################
+# Link the static library external/libUnity.a
+
+build external/libUnity.a: C_STATIC_LIBRARY_LINKER__Unity_Debug external/CMakeFiles/Unity.dir/unity/src/unity.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = external/CMakeFiles/Unity.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = external/libUnity.a
+  TARGET_PDB = Unity.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build external/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug/external && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build external/test: phony external/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build external/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug/external && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build external/edit_cache: phony external/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build external/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug/external && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/filippetrovic/Code/c-unity -B/Users/filippetrovic/Code/c-unity/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build external/rebuild_cache: phony external/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/filippetrovic/Code/c-unity/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tests
+
+
+#############################################
+# Order-only phony target for tests
+
+build cmake_object_order_depends_target_tests: phony || cmake_object_order_depends_target_Unity cmake_object_order_depends_target_sum_module
+
+build test/CMakeFiles/tests.dir/main.c.o: C_COMPILER__tests_unscanned_Debug /Users/filippetrovic/Code/c-unity/test/main.c || cmake_object_order_depends_target_tests
+  DEP_FILE = test/CMakeFiles/tests.dir/main.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/filippetrovic/Code/c-unity/sum_module -I/Users/filippetrovic/Code/c-unity/external/unity/src
+  OBJECT_DIR = test/CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/tests.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tests
+
+
+#############################################
+# Link the executable test/tests
+
+build test/tests: C_EXECUTABLE_LINKER__tests_Debug test/CMakeFiles/tests.dir/main.c.o | sum_module/libsum_module.a external/libUnity.a || external/libUnity.a sum_module/libsum_module.a
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+  LINK_LIBRARIES = sum_module/libsum_module.a  external/libUnity.a
+  OBJECT_DIR = test/CMakeFiles/tests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = test/tests
+  TARGET_PDB = tests.dbg
+
+
+#############################################
+# Utility command for test
+
+build test/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test/test: phony test/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build test/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build test/edit_cache: phony test/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build test/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/filippetrovic/Code/c-unity/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/filippetrovic/Code/c-unity -B/Users/filippetrovic/Code/c-unity/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build test/rebuild_cache: phony test/CMakeFiles/rebuild_cache.util
+
 # =============================================================================
 # Target aliases.
+
+build Unity: phony external/libUnity.a
+
+build libUnity.a: phony external/libUnity.a
+
+build libsum_module.a: phony sum_module/libsum_module.a
+
+build sum_module: phony sum_module/libsum_module.a
+
+build tests: phony test/tests
 
 # =============================================================================
 # Folder targets.
@@ -105,7 +707,28 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/filippetrovic/Code/c-unity/cmake-build-debug
 
-build all: phony c_unity
+build all: phony sum_module/all external/all test/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/filippetrovic/Code/c-unity/cmake-build-debug/external
+
+build external/all: phony external/libUnity.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/filippetrovic/Code/c-unity/cmake-build-debug/sum_module
+
+build sum_module/all: phony sum_module/libsum_module.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/filippetrovic/Code/c-unity/cmake-build-debug/test
+
+build test/all: phony test/tests
 
 # =============================================================================
 # Built-in targets
@@ -114,14 +737,14 @@ build all: phony c_unity
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/filippetrovic/Code/c-unity/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTestTargets.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTestUseLaunchers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/DartConfiguration.tcl.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/filippetrovic/Code/c-unity/CMakeLists.txt /Users/filippetrovic/Code/c-unity/external/CMakeLists.txt /Users/filippetrovic/Code/c-unity/sum_module/CMakeLists.txt /Users/filippetrovic/Code/c-unity/test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/filippetrovic/Code/c-unity/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTestTargets.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTestUseLaunchers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/DartConfiguration.tcl.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/filippetrovic/Code/c-unity/CMakeLists.txt /Users/filippetrovic/Code/c-unity/external/CMakeLists.txt /Users/filippetrovic/Code/c-unity/sum_module/CMakeLists.txt /Users/filippetrovic/Code/c-unity/test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

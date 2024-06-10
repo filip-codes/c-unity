@@ -37,6 +37,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/Users/filippetrovic/Code/c-unity/cmake-build-debug/sum_module/cmake_install.cmake")
+  include("/Users/filippetrovic/Code/c-unity/cmake-build-debug/external/cmake_install.cmake")
+  include("/Users/filippetrovic/Code/c-unity/cmake-build-debug/test/cmake_install.cmake")
+
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
